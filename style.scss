@@ -1,11 +1,21 @@
+$green:#0ca409;
+$blue:#0076c6;
+$dark-grey:#333;
+$light-grey:#888;
+$lightest-grey: #aaaaaa;
+
 body {
     background-color: #f2f5f6;
     display: inline-block;
+    min-height: 100vh;
+    width: 100%;
+
+    font-family: "Adelle SAGE";
 }
 
 .header {
     background-color: green;
-    height: 100vh;
+    height: 100%;
     width: 35%;
     color: white;
     position: relative;
@@ -63,13 +73,32 @@ body {
     &__link:hover::after {
         left: 0;
     }
+
+    &--form {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
 }
 
 .main {
     background-color: #f2f5f6;
     width: 65%;
     padding: 0 200px;
+    height: 100%;
+
+    &--form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__container {
+        max-width: 620px !important;
+        margin: 0 auto;
+    }
 }
+
+
 
 .welcome,
 .final {
@@ -95,6 +124,8 @@ body {
     }
 }
 
+
+
 .more {
     &__heading {
         font-size: 1rem;
@@ -110,6 +141,54 @@ body {
     &__time {
         opacity: 0.5;
         font-size: 1.1rem;
+    }
+}
+
+.form {
+    &__question-number {
+        color: $lightest-grey;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__todo {
+        font-weight: 700;
+        font-size: 1rem;
+        color: $lightest-grey;
+        line-height: 1rem;
+    }
+
+    &__question {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $dark-grey;
+    }
+
+    &__dropdown {
+        text-align: left;
+        position: relative;
+
+        &::after {
+            content: 'u';
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 6px 0px grey;
+
+    &__next {
+        background-color: green;
+        color: white;
     }
 }
 
@@ -133,5 +212,212 @@ body {
         &__subheading {
             text-align: justify;
         }
+    }
+}
+
+
+
+
+
+.checkbox {
+    box-shadow: 0 0 6px 0px grey;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px grey inset;
+    transition: 0.2s;
+    line-height: 25px;
+
+}
+
+.checkbox-text {
+    line-height: 25px;
+    font-size: 1rem;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
+    background-color: $light-grey;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
+    background-color: $blue;
+    box-shadow: 0 0 0 2px $blue inset;
+}
+
+.checkbox-container input:checked~.checkbox-text {
+    color: $blue;
+}
+
+.checkbox-border {
+    box-shadow: 0 0 3px 2px $blue;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark::after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark::after {
+    left: 10px;
+    top: 5px;
+    width: 6px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+.main--form .blur {
+    filter: blur(2px);
+}
+
+
+//modal
+.modal {
+    &__heading {
+        color: $dark-grey;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    &__todo {
+        font-size: 1rem;
+        opacity: 0.5;
+        font-weight: 700;
+        color: $light-grey;
+    }
+
+    &-wrap {
+        display: none;
+    }
+
+    &-wrap.active {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    &-wrap.active .modal {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 592px;
+        background-color: white;
+        height: fit-content;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+
+
+    .container {
+        flex-basis: 100%;
+        background-color: white;
+    }
+
+    .cancel {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-family: arial;
+        font-size: 30px;
+        background-color: white;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .checkbox {
+        box-shadow: none;
+    }
+
+    &__checkboxes {
+        padding-bottom: 50px;
+    }
+
+    .checkmark {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .checkbox-text {
+        font-size: 1rem;
+        line-height: 20px;
+        margin-left: 2rem;
+    }
+
+    .checkbox-container .checkmark::after {
+        left: 7px;
+        top: 2px;
+        width: 6px;
+        height: 13px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        max-width: 138px;
+        background-color: $green !important;
     }
 }
