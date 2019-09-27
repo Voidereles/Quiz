@@ -196,7 +196,6 @@ body {
 
 .more {
     &__heading {
-        font-size: 1rem;
         font-weight: 700;
     }
 
@@ -499,6 +498,7 @@ body {
         background-color: transparent;
         color: black;
 
+
         &__link {
             color: black;
         }
@@ -523,6 +523,10 @@ body {
     .welcome,
     .final {
         text-align: center;
+
+        &__heading {
+            margin: 0 auto;
+        }
 
         &__subheading {
             text-align: justify;

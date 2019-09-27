@@ -190,7 +190,6 @@ body {
 }
 
 .more__heading {
-  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -506,6 +505,10 @@ body {
   .welcome,
   .final {
     text-align: center;
+  }
+  .welcome__heading,
+  .final__heading {
+    margin: 0 auto;
   }
   .welcome__subheading,
   .final__subheading {
