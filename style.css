@@ -658,8 +658,7 @@ body {
 }
 
 .modal__checkboxes {
-  max-height: calc(37vh - 30px);
-  overflow-y: scroll;
+  max-height: calc(100% - 40px);
 }
 
 .modal .checkmark {
@@ -687,9 +686,7 @@ body {
 }
 
 .modal__btn {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  border-radius: 0;
   background-color: #0ca409 !important;
 }
 /*# sourceMappingURL=style.css.map */
