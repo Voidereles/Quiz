@@ -486,6 +486,10 @@ body {
     min-height: 5vh;
     background-color: transparent;
     color: black;
+    position: initial;
+  }
+  .header .row div {
+    margin: 0 auto;
   }
   .header__link {
     color: black;
