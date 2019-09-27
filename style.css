@@ -510,6 +510,9 @@ body {
   .header__link {
     color: black;
   }
+  .header__link:hover {
+    color: #0076c6;
+  }
   .header::after {
     z-index: -5;
     position: relative;
@@ -522,6 +525,9 @@ body {
     width: 100%;
     padding: 0 20px;
   }
+  .welcome__logo-container {
+    display: none;
+  }
   .welcome,
   .final {
     text-align: center;
@@ -529,6 +535,10 @@ body {
   .welcome__heading,
   .final__heading {
     margin: 0 auto;
+  }
+  .welcome__text,
+  .final__text {
+    text-align: left;
   }
   .welcome__subheading,
   .final__subheading {
@@ -538,11 +548,14 @@ body {
   .final__logo-container {
     margin-right: 0;
   }
+  .form__question {
+    font-size: 1.875rem;
+  }
   .footer__back {
-    width: 69.5%;
+    width: 56.25%;
   }
   .footer__next {
-    width: 30.5%;
+    width: 43.75%;
   }
 }
 
@@ -559,7 +572,7 @@ body {
 
 .modal__heading {
   color: #333;
-  font-size: 1.5rem;
+  font-size: 1rem !important;
   font-weight: 700;
   line-height: 24px;
 }

@@ -521,6 +521,10 @@ body {
 
         &__link {
             color: black;
+
+            &:hover {
+                color: $blue;
+            }
         }
 
         &::after {
@@ -540,12 +544,22 @@ body {
         padding: 0 20px;
     }
 
+    .welcome {
+        &__logo-container {
+            display: none;
+        }
+    }
+
     .welcome,
     .final {
         text-align: center;
 
         &__heading {
             margin: 0 auto;
+        }
+
+        &__text {
+            text-align: left;
         }
 
         &__subheading {
@@ -559,15 +573,21 @@ body {
 
     }
 
+    .form {
+        &__question {
+            font-size: 1.875rem;
+        }
+    }
+
     .footer {
 
 
         &__back {
-            width: 69.5%;
+            width: 56.25%;
         }
 
         &__next {
-            width: 30.5%;
+            width: 43.75%;
         }
     }
 }
@@ -590,7 +610,7 @@ body {
 
     &__heading {
         color: $dark-grey;
-        font-size: 1.5rem;
+        font-size: 1rem !important;
         font-weight: 700;
         line-height: 24px;
     }
