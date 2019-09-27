@@ -550,6 +550,7 @@ body {
   }
   .form__question {
     font-size: 1.875rem;
+    line-height: 36px;
   }
   .footer__back {
     width: 56.25%;
