@@ -19,7 +19,8 @@ body {
   min-height: 100vh;
   width: 100%;
   color: #333;
-  font-family: "Adelle SAGE", sans-serif;
+  font-family: "Adelle SAGE", serif;
+  font-weight: 400;
 }
 
 .header {
