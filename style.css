@@ -115,8 +115,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main--form {
@@ -140,8 +140,7 @@ body {
   font-size: 0.875rem;
 }
 
-.welcome__heading,
-.welcome__result,
+.welcome__heading, .welcome__result,
 .final__heading,
 .final__result {
   margin-top: 10vh;
@@ -213,7 +212,7 @@ body {
 
 .more__img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -267,7 +266,7 @@ body {
 
 .checkbox {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border: 1px solid transparent;
 }
 
@@ -297,13 +296,13 @@ body {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   left: 0;
   height: 25px;
   width: 25px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 0 2px #ccc inset;
-  box-shadow: 0 0 0 2px #ccc inset;
+          box-shadow: 0 0 0 2px #ccc inset;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   line-height: 25px;
@@ -315,25 +314,25 @@ body {
 }
 
 /* On mouse-over, add a grey background color */
-.checkbox-container:hover input~.checkmark {
+.checkbox-container:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.checkbox-container input:checked~.checkmark {
+.checkbox-container input:checked ~ .checkmark {
   background-color: #0076c6;
   -webkit-box-shadow: 0 0 0 2px #0076c6 inset;
-  box-shadow: 0 0 0 2px #0076c6 inset;
+          box-shadow: 0 0 0 2px #0076c6 inset;
 }
 
-.checkbox-container input:checked~.checkbox-text {
+.checkbox-container input:checked ~ .checkbox-text {
   color: #0076c6;
 }
 
 .checkbox-border {
   border: 1px solid #0076c6;
   -webkit-box-shadow: 0 0 10px rgba(0, 118, 198, 0.5);
-  box-shadow: 0 0 10px rgba(0, 118, 198, 0.5);
+          box-shadow: 0 0 10px rgba(0, 118, 198, 0.5);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -344,7 +343,7 @@ body {
 }
 
 /* Show the checkmark when checked */
-.checkbox-container input:checked~.checkmark::after {
+.checkbox-container input:checked ~ .checkmark::after {
   display: block;
 }
 
@@ -396,25 +395,25 @@ body {
   width: 100%;
   border: 1px solid transparent;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .your-data__form input:focus {
   -webkit-box-shadow: 0 0 10px rgba(0, 118, 198, 0.5);
-  box-shadow: 0 0 10px rgba(0, 118, 198, 0.5);
+          box-shadow: 0 0 10px rgba(0, 118, 198, 0.5);
   border: 1px solid #0076c6;
   color: #0076c6;
 }
 
 .your-data__form .checkbox {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .your-data__form .checkmark {
   top: 0;
   -webkit-transform: none;
-  transform: none;
+          transform: none;
 }
 
 .your-data__form .checkbox-text {
@@ -437,7 +436,7 @@ body {
 .your-data__form .btn {
   border-radius: 0;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #0ca409;
   height: 50px;
   width: 91px;
@@ -466,7 +465,7 @@ body {
   width: 100%;
   background-color: white;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .footer__back {
@@ -482,7 +481,7 @@ body {
 .footer__back img {
   top: 50%;
   -webkit-transform: translateY(-25%);
-  transform: translateY(-25%);
+          transform: translateY(-25%);
 }
 
 .footer__next {
@@ -508,72 +507,57 @@ body {
     color: black;
     position: initial;
   }
-
   .header .row div {
     margin: 0 auto;
   }
-
   .header__link {
     color: black;
   }
-
   .header__link:hover {
     color: #0076c6;
   }
-
   .header::after {
     z-index: -5;
     position: relative;
   }
-
   .header--form {
     position: initial;
   }
-
   .main {
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
   }
-
   .welcome__logo-container {
     display: none;
   }
-
   .welcome,
   .final {
     text-align: center;
   }
-
   .welcome__heading,
   .final__heading {
     margin: 0 auto;
   }
-
   .welcome__text,
   .final__text {
     text-align: left;
   }
-
   .welcome__subheading,
   .final__subheading {
     text-align: justify;
   }
-
   .welcome__logo-container,
   .final__logo-container {
     margin-right: 0;
   }
-
   .form__question {
     font-size: 1.875rem;
     line-height: 36px;
   }
-
   .footer__back {
     width: 56.25%;
   }
-
   .footer__next {
     width: 43.75%;
   }
@@ -587,7 +571,7 @@ body {
 
 .main--form .blur {
   -webkit-filter: blur(2px);
-  filter: blur(2px);
+          filter: blur(2px);
 }
 
 .modal__heading {
@@ -624,13 +608,13 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 90%;
   max-width: 592px;
   background-color: white;
@@ -638,14 +622,14 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   min-height: 65vh;
   max-height: 85vh;
 }
 
 .modal .container {
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+      flex-basis: 100%;
   background-color: white;
 }
 
@@ -666,7 +650,7 @@ body {
 
 .modal .checkbox {
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .modal .checkbox-border {
@@ -705,5 +689,4 @@ body {
   border-radius: 0;
   background-color: #0ca409 !important;
 }
-
 /*# sourceMappingURL=style.css.map */
