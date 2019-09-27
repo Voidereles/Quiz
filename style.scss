@@ -1,8 +1,15 @@
+@font-face {
+    font-family: "Adelle SAGE";
+    src: url("AdelleSansSage/AdelleSansSAGE-Bold.ttf") format("truetype");
+}
+
 $green:#0ca409;
 $blue:#0076c6;
 $dark-grey:#333;
 $light-grey:#888;
 $lightest-grey: #aaaaaa;
+
+
 
 body {
     background-color: #f2f5f6;
@@ -10,7 +17,7 @@ body {
     min-height: 100vh;
     width: 100%;
     color: #333;
-    font-family: "Adelle SAGE";
+    font-family: "Adelle SAGE", sans-serif;
 }
 
 .header {
@@ -87,6 +94,10 @@ body {
             }
         }
     }
+
+    .back {
+        color: $dark-grey;
+    }
 }
 
 .main {
@@ -107,7 +118,6 @@ body {
     }
 
     &__container {
-        width: 90%;
         max-width: 620px !important;
         margin: 0 auto;
     }
@@ -212,8 +222,13 @@ body {
         position: relative;
 
         &::after {
-            content: 'u';
+            content: '';
+            background-image: url('images/arrow-down.png');
+            background-repeat: no-repeat;
+            background-size: contain;
             position: absolute;
+            width: 10px;
+            height: 10px;
             right: 1rem;
             top: 50%;
             transform: translateY(-50%);
@@ -446,7 +461,7 @@ body {
         font-weight: 700;
 
         &:hover {
-            background-color: darken($green, 5%);
+            background-color: lighten($green, 5%);
             text-decoration: none;
         }
     }
@@ -457,6 +472,23 @@ body {
         width: 100%;
         height: 5vh;
         min-height: 5vh;
+        background-color: transparent;
+        color: black;
+
+        &__link {
+            color: black;
+        }
+
+        &::after {
+            z-index: -5;
+            position: relative;
+        }
+
+        &--form {
+            position: initial;
+
+        }
+
     }
 
     .main {
@@ -489,6 +521,7 @@ body {
 
 //modal
 .modal {
+
 
     &__heading {
         color: $dark-grey;
@@ -569,17 +602,29 @@ body {
         max-height: 37vh;
         overflow-y: scroll;
 
-        // &::after {
-    //     content: '';
-    //     padding-top: 40px;
-    //     text-align: center;
-    //     position: absolute;
-    //     bottom: 100px;
-    //     left: 0;
-    //     height: 141px;
-    //     width: 100%;
-    //     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 1));
-    // }
+        &::after {
+            content: '';
+            padding-top: 40px;
+            text-align: center;
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            height: 141px;
+            width: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 1));
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 23px;
+            top: 60px;
+            width: 20px;
+            height: 65%;
+            background: white;
+            z-index: 5;
+
+        }
     }
 
 
@@ -613,7 +658,6 @@ body {
         position: absolute;
         bottom: 30px;
         right: 30px;
-        max-width: 138px;
         background-color: $green !important;
     }
 }
