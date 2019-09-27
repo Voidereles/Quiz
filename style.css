@@ -154,6 +154,7 @@ body {
 .final__thank {
   font-size: 2.625rem;
   font-weight: 700;
+  font-family: "Adelle Sans SAGE";
 }
 
 .welcome__result,
@@ -530,6 +531,9 @@ body {
   }
   .welcome__logo-container {
     display: none;
+  }
+  .more {
+    padding-bottom: 50px;
   }
   .welcome,
   .final {
