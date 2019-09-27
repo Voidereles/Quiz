@@ -706,7 +706,7 @@ body {
         // }
 
         // &::before {
-        //     content: '';
+        //     co__ntent: '';
         //     position: absolute;
         //     right: 23px;
         //     top: 60px;
@@ -750,6 +750,7 @@ body {
         position: absolute;
         bottom: 30px;
         right: 30px;
+        border-radius: 0;
         background-color: $green !important;
     }
 }
