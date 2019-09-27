@@ -33,6 +33,10 @@ body {
     font-weight: 400;
 }
 
+.height-min-100 {
+    min-height: 100vh;
+}
+
 .header {
     background-color: rgba(12, 164, 9, 0.75);
     min-height: 100vh;
@@ -41,11 +45,6 @@ body {
     color: white;
     position: fixed;
     z-index: 1;
-
-    &--your-data {
-        width: 38.3%;
-    }
-
 
     &::after {
         content: '';
@@ -117,13 +116,12 @@ body {
     background-color: #f2f5f6;
     width: 70.3%;
     padding: 0 150px;
-    height: 100%;
     margin-left: 29.7%;
 
     &--your-data {
-        width: 61.7%;
-        padding: 0 165px;
-        margin-left: 38.3%;
+
+        display: flex;
+        align-items: center;
     }
 
     &--form {
@@ -144,7 +142,7 @@ body {
 .final {
     &__logo-container {
         padding-top: 33px;
-        margin-right: -140px;
+        margin-right: -100px;
 
         .logo-text {
             font-size: 0.875rem;
@@ -220,6 +218,7 @@ body {
         color: $lightest-grey;
         text-transform: uppercase;
         font-weight: 700;
+        font-family: 'Adelle Sans SAGE';
     }
 
     &__todo {
@@ -233,6 +232,7 @@ body {
         font-size: 2.25rem;
         line-height: 48px;
         font-weight: 700;
+        font-family: 'Adelle Sans SAGE';
         color: $dark-grey;
         max-width: 620px;
     }
@@ -352,17 +352,19 @@ body {
 
 
 .your-data {
+
     &__subheading {
         color: $lightest-grey;
-        font-size: 1rem;
         font-weight: 700;
         text-transform: uppercase;
+        font-family: "Adelle Sans SAGE";
     }
 
     &__heading {
-        font-size: 36px;
+        font-size: 2.25rem;
         font-weight: 700;
         color: $dark-grey;
+        font-family: "Adelle Sans SAGE";
     }
 
     &__p {
@@ -463,6 +465,7 @@ body {
 
     &__back {
         color: $dark-grey;
+        width: calc(100% - 140px);
 
         &:hover {
             color: $dark-grey;
@@ -479,6 +482,7 @@ body {
         background-color: $green;
         color: white;
         font-weight: 700;
+        width: 140px;
 
         &:hover {
             background-color: lighten($green, 5%);
@@ -506,7 +510,6 @@ body {
 
         &--form {
             position: initial;
-
         }
 
     }
@@ -530,6 +533,24 @@ body {
         }
 
 
+    }
+
+    .footer {
+
+
+        &__back {
+            width: 69.5%;
+        }
+
+        &__next {
+            width: 30.5%;
+        }
+    }
+}
+
+@media (min-width:1921px) {
+    .main {
+        padding: 0 13vw;
     }
 }
 
