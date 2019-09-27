@@ -161,11 +161,13 @@ body {
   text-transform: uppercase;
   opacity: 0.5;
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .welcome__subheading,
 .final__subheading {
-  margin-top: 10vh;
+  margin-top: 3vh;
+  font-size: 1rem;
 }
 
 .welcome__btn,
@@ -189,14 +191,28 @@ body {
   line-height: 24px;
 }
 
+.more {
+  font-size: 1rem;
+}
+
+.more__item {
+  color: #333;
+  text-decoration: none;
+}
+
+.more__item:hover {
+  text-decoration: none;
+  color: #0076c6;
+}
+
 .more__heading {
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .more__img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-height: 120px;
   width: 100%;
 }
 

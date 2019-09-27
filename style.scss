@@ -167,10 +167,12 @@ body {
         text-transform: uppercase;
         opacity: 0.5;
         font-weight: 700;
+        font-size: 1rem;
     }
 
     &__subheading {
-        margin-top: 10vh;
+        margin-top: 3vh;
+        font-size: 1rem;
     }
 
     &__btn {
@@ -195,13 +197,27 @@ body {
 
 
 .more {
+    font-size: 1rem;
+
+    &__item {
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: $blue;
+        }
+    }
+
     &__heading {
         font-weight: 700;
+        font-size: 1rem;
+
     }
 
     &__img {
         object-fit: cover;
-        max-height: 120px;
+
         width: 100%;
     }
 
