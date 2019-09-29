@@ -1,16 +1,19 @@
 @font-face {
   font-family: "Adelle Sans SAGE";
   src: url("AdelleSansSage/AdelleSansSAGE-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 @font-face {
   font-family: "Adelle SAGE";
   src: url("AdelleSage/AdelleSAGE-Bold.ttf") format("truetype");
+  font-weight: bold;
 }
 
 @font-face {
   font-family: "Adelle SAGE";
   src: url("AdelleSage/AdelleSage.ttf") format("truetype");
+  font-weight: normal;
 }
 
 body {
